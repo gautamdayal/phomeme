@@ -7,6 +7,26 @@ import pandas as pd
 import tools
 from colorama import Fore, Back, Style
 
+def purify(L):
+    outL = []
+    for item in L:
+        if item not in outL:
+            outL.append(item)
+    return outL
+
+arpabet = nltk.corpus.cmudict.dict()
+# Extracts ARPABET style phonemes from any sentence
+def phonemeExtractor(s):
+    result = []
+    for word in s.lower().split():
+        try:
+            pList=arpabet[word][0]
+        except:
+            pass
+        for p in pList:
+            result.append(p)
+    return result
+
 # Collecting arguments in format [main.py] [link] [inputfile]
 args = sys.argv
 try:
@@ -26,11 +46,13 @@ transcript_frame = tools.convert_vtt([f'assets/{proj_name}.en.vtt'])
 with open(fin, 'r') as file:
     text = file.readlines()
 
-print('transcript', transcript_frame)
-print('input',text)
+words = purify(text.split())
+in_nemes = purify(phonemeExtractor(words))
 
+
+for i in range(0, len(transcript_frame)-1):
+    if
 # Opening the ARPABET corpus as a dictionary
-# arpabet = nltk.corpus.cmudict.dict()
 
 
 """

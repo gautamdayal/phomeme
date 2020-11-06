@@ -1,3 +1,6 @@
-this is some text
+this
+is
+some
+text
 hopefully it show up in the shell
 is this text lol

@@ -18,7 +18,9 @@ def phonemeExtractor(s):
     result = []
     for word in s.lower().split():
         try:
-            result.append(arpabet[word])
+            pList=arpabet[word][0]
+            for p in pList:
+                result.append(p)
         except:
             pass
     return result
