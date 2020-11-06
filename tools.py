@@ -1,3 +1,7 @@
+import webvtt
+import pandas as pd
+import os
+
 # Converts vtt to csv for readability
 def convert_vtt(filenames):
     #extract the text and times from the vtt file
@@ -7,7 +11,6 @@ def convert_vtt(filenames):
         text_time['text'] = [caption.text for caption in captions]
         text_time['start'] = [caption.start for caption in captions]
         text_time['stop'] = [caption.end for caption in captions]
-        os.remove(file)
         return(text_time)
 
 # Extracts ARPABET style phonemes from any sentence
