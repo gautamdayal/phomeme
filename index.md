@@ -1,19 +1,16 @@
-# About
-
-Ever wanted to create a frankenbite or YTP of your favourite character? You must've gone through hours of footage
-just for a few minutes of dialogue. Well, phoMeme can save all that work. Keep reading to find out more.
-
-
-# Worflow
-PhoMeme, at a high level, does 5 things:
-
-
-1. Takes in a YouTube link, and a text file with the desired output sentences
-1. Creates a pandas DataFrame to store subtitles with timestamps, and does the same for the input text
-1. Converts English words to standard ARPABET phonemes
-1. Tries matching input words to respective timestamps in the video. If the word is not found, the program searches for individual syllables.
-1. Returns a color-coded file with the input text marked with timestamps to each word/syllable
-
-# Sample
+<h1 id="about">About</h1>
+<p>Ever wanted to create a frankenbite or YTP of your favourite character? You must&#39;ve gone through hours of footage
+just for a few minutes of dialogue. Well, phoMeme can save all that work. Keep reading to find out more.</p>
+<h1 id="worflow">Worflow</h1>
+<p>PhoMeme, at a high level, does 5 things:</p>
+<ol>
+<li>Takes in a YouTube link, and a text file with the desired output sentences</li>
+<li>Creates a pandas DataFrame to store subtitles with timestamps, and does the same for the input text</li>
+<li>Converts English words to standard ARPABET phonemes</li>
+<li>Tries matching input words to respective timestamps in the video. If the word is not found, the program searches for individual syllables.</li>
+<li>Returns a color-coded file with the input text marked with timestamps to each word/syllable</li>
+</ol>
+<h1>Sample</h1>
+<p>The content of the input text file was 'Happy Birthday Arsh. I had hoped you'd get some rather nice presents,' and the audio subtitles were generated from videos of Michael Rosen speaking. </p>
 
 <iframe width="965" height="543" src="https://www.youtube.com/embed/0NSTNlePDcA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
