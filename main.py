@@ -19,6 +19,7 @@ arpabet = nltk.corpus.cmudict.dict()
 def phonemeExtractor(s):
     result = []
     for word in s.lower().split():
+        pList=[]
         try:
             pList=arpabet[word][0]
         except:
@@ -46,23 +47,20 @@ transcript_frame = tools.convert_vtt([f'assets/{proj_name}.en.vtt'])
 with open(fin, 'r') as file:
     text = file.readlines()
 
-words = purify(text.split())
+words = ''.join(purify(text))
 in_nemes = purify(phonemeExtractor(words))
 
+outF = open(f'{proj_name}.txt', 'w')
+for i in range(0, len(transcript_frame)-1):
+    for s in transcript_frame.loc[i]['text'].split():
+        if s in words:
+            outF.write(f'{s}, ')
+            outF.write(str(transcript_frame.loc[i]['start'])+str(transcript_frame.loc[i]['stop'])+'\n')
 
 for i in range(0, len(transcript_frame)-1):
-    if
-# Opening the ARPABET corpus as a dictionary
+    for p in phonemeExtractor(transcript_frame.loc[i]['text']):
+        if p in in_nemes:
+            outF.write(f'{p}, ')
+            outF.write(str(transcript_frame.loc[i]['start'])+str(transcript_frame.loc[i]['stop']) + '\n')
 
-
-"""
-explore: webvtt segmenting, python re (reg exp stuff)
-
-Flow ^_^
-6. convert to phonemes
-7. make epic thing with phonemes matched with timestamps
-
-8. Convert input to phonemes.
-9. matching process
-10. Output timestamps for each phoneme chain
-"""
+outF.close()

@@ -1,6 +1,23 @@
+welcome
+to
+phomeme
 this
 is
-some
-text
-hopefully it show up in the shell
-is this text lol
+a
+tool
+that
+can
+make
+your
+favorite
+character
+say
+anything
+you
+want
+check
+out
+the
+code
+and
+website
