@@ -13,3 +13,7 @@ PhoMeme, at a high level, does 5 things:
 1. Converts English words to standard ARPABET phonemes
 1. Tries matching input words to respective timestamps in the video. If the word is not found, the program searches for individual syllables.
 1. Returns a color-coded file with the input text marked with timestamps to each word/syllable
+
+# Sample
+
+<iframe width="965" height="543" src="https://www.youtube.com/embed/0NSTNlePDcA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
